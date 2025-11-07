@@ -4,20 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Exercise</title>
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
   <div class="container">
     <!-- AUDIO HTML GOES HERE -->
+     <h2>Audio</h2>
+     <audio controls muted loop>
+      <source src="./assets/audio/piano.wav">
+     </audio>
 
     <!-- VIDEO HTML GOES HERE -->
+      <h2>Video</h2>
+      <video width="500" controls muted poster="./assets/images/poster.jpg">
+        <source src="./assets/video/ocean.mp4">
+      </video>
 
     <!-- IMAGE MAP HTML GOES HERE-->
+     <h2>Image Map</h2>
+     <img src="./assets/images/fruit_table.jpg" alt="" width="600" usemap="#tableMap">
+     <map id="tableMap">
+      <area shape="rect" coords="10,200,100,400" href="https://en.wikipedia.org/wiki/Lavandula" alt="Lavandula" title="Lavandula">
+      <area shape="rect" coords="330,400,650,531" href="https://en.wikipedia.org/wiki/Orange_(fruit)" alt="Orange" title="Orange">
+      <area shape="circle" coords="430,170,60" href="https://en.wikipedia.org/wiki/Coffee" alt="Cup of Coffee" title="Coffee">
+     </map>
 
     <!-- CANVAS HTML GOES HERE -->
+     <h2>Canvas</h2>
+     <section id="canvas"></section>
+     <canvas id="myCanvas" width="500" height="500"></canvas>
   </div>
 
   <script>
     /* CANVAS JAVASCRIPT GOES HERE */
+    const canvas = document.getElementById("myCanvas")
+    const context = canvas.getContext ("2d")
+
+    context.beginPath()
+    context.moveTo(100,100)
+    context.lineTo(100,400)
+    context.strokeStyle = "purple"
+    context.lineWidth = 20
+    context.stroke()
+
+    context.beginPath()
+    context.moveTo(100,400)
+    context.lineTo(400,400)
+    context.strokeStyle = "blue"
+    context.lineWidth = 20
+    context.stroke()
+
+    context.beginPath()
+    context.moveTo(400,400)
+    context.lineTo(400,100)
+    context.strokeStyle = "cyan"
+    context.lineWidth = 20
+    context.stroke()
+
+    context.beginPath()
+    context.moveTo(400,100)
+    context.lineTo(100,100)
+    context.strokeStyle = "green"
+    context.lineWidth = 20
+    context.stroke()
+
+
   </script>
 </body>
 </html>
